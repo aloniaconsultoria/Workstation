@@ -17,3 +17,4 @@ end
 describe package ('cawsay') do
   it { should_not be_installed }
 end
+
