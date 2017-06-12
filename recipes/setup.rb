@@ -6,14 +6,8 @@ package "git" do
 	action :install
 end
 
-file '/etc/motd' do
-	content "Propiedad de AGV \n
-           IPADRRESS:#{node['ipaddress']}
-	   MEMORIA:#{node['memory']['total']}
-
-
-"
-
+template '/etc/motd' do
+	source  "motd.erb"
 
 	action :create
 end	
