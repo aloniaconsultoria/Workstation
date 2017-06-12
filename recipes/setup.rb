@@ -7,6 +7,13 @@ package "git" do
 end
 
 file '/etc/motd' do
-	content "Propiedad de AGV \n"
+	content "Propiedad de AGV \n
+           IPADRRESS:#{node['ipaddress']}
+	   MEMORIA:#{node['memory']['total']}
+
+
+"
+
+
 	action :create
 end	
